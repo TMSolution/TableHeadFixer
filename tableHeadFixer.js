@@ -204,12 +204,15 @@
 
 			var column = settings.rightColumns;
 
+                     
 			column.each(function(k, cell) {
 				var cell = $(cell);
 
 				setBackground(cell);
 				cell.css({
 					'position' : 'relative'
+                                        
+                                        
 				});
 			});
 
@@ -220,17 +223,22 @@
 			elements.each(function(k, element) {
 				var element = $(element);
 				var parent = $(element).parent();
-
-				var elementBackground = element.css("background-color");
-				elementBackground = (elementBackground == "transparent" || elementBackground == "rgba(0, 0, 0, 0)") ? null : elementBackground;
-
-				var parentBackground = parent.css("background-color");
-				parentBackground = (parentBackground == "transparent" || parentBackground == "rgba(0, 0, 0, 0)") ? null : parentBackground;
-
-				var background = parentBackground ? parentBackground : "white";
-				background = elementBackground ? elementBackground : background;
-
-				element.css("background-color", background);
+//
+//				var elementBackground = element.css("background-color");
+//                                
+//                                if(elementBackground !='inherit'){
+//				elementBackground = (elementBackground == "transparent" || elementBackground == "rgba(0, 0, 0, 0)") ? null : elementBackground;
+//
+//				var parentBackground = parent.css("background-color");
+//				parentBackground = (parentBackground == "transparent" || parentBackground == "rgba(0, 0, 0, 0)") ? null : parentBackground;
+//
+//				var background = parentBackground ? parentBackground : "white";
+//				background = elementBackground ? elementBackground : background;
+//
+//				element.css("background-color", background);}
+                                element.css("background-color", 'inherit');
+                               
+                
 			});
 		}
 
